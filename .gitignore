@@ -1,0 +1,4 @@
+*.dSYM
+tests
+run
+main
