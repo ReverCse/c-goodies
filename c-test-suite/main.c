@@ -3,7 +3,11 @@
 
 void runTests()
 {
+    printf("EQUALITY TESTS:\n");
     testAssertEquals();
+
+    printf("\nGREATER-THAN TESTS:\n");
+    testAssertGreaterThan();
 }
 
 int main(void)
