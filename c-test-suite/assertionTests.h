@@ -52,3 +52,16 @@ bool assertEquals(void* param1, void* param2, char* datatype);
  * 
  */
 bool assertGreaterThan(void* param1, void* param2, char* datatype);
+
+/**
+ * Checks whether param2 is greater-than or equal to than param1
+ * (int, bool, char, double, float)
+ * 
+ * @param void* param1
+ * @param void* param2
+ * @param char* datatype
+ * 
+ * @returns bool
+ * 
+ */
+bool assertGreaterThanEqualTo(void* param1, void* param2, char* datatype);

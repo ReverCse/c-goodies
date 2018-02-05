@@ -8,6 +8,9 @@ void runTests()
 
     printf("\nGREATER-THAN TESTS:\n");
     testAssertGreaterThan();
+
+    printf("\nGREATER-THAN OR EQUAL-TO TESTS:\n");
+    testAssertGreaterThanEqualTo();
 }
 
 int main(void)
