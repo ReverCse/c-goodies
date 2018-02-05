@@ -46,6 +46,8 @@ bool assertGreaterThan(void* param1, void* param2, char* datatype)
             return *(double*)(param2) > *(double*)(param1);
         case FLOAT:
             return *(float*)(param2) > *(float*)(param1);
+        default:
+            return false;
     }
 }
 
@@ -60,5 +62,23 @@ bool assertGreaterThanEqualTo(void* param1, void* param2, char* datatype)
             return *(double*)(param2) >= *(double*)(param1);
         case FLOAT:
             return *(float*)(param2) >= *(float*)(param1);
+        default:
+            return false;
+    }
+}
+
+bool assertLessThan(void* param1, void* param2, char* datatype)
+{
+    switch (determineDatatype(datatype)) {
+        case INT:
+            return *(int*)(param2) < *(int*)(param1);
+        case CHAR:
+            return *(char*)(param2) < *(char*)(param1);
+        case DOUBLE:
+            return *(double*)(param2) < *(double*)(param1);
+        case FLOAT:
+            return *(float*)(param2) < *(float*)(param1);
+        default:
+            return false;
     }
 }
