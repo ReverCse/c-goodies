@@ -14,6 +14,9 @@ void runTests()
 
     printf("\nLESS-THAN TESTS:\n");
     testAssertLessThan();
+
+    printf("\nLESS-THAN OR EQUAL-TO TESTS:\n");
+    testAssertLessThanEqualTo();
 }
 
 int main(void)

@@ -202,3 +202,51 @@ void testAssertLessThan()
         printf(ANSI_COLOR_RED "FLOAT tests FAILED!" ANSI_COLOR_RESET "\n");
     }
 }
+
+void testAssertLessThanEqualTo()
+{
+    int param1 = 2;
+    int param2 = 3;
+    int param3 = 1;
+    char char1 = 'b';
+    char char2 = 'c';
+    char char3 = 'a';
+    double double1 = 1.2;
+    double double2 = 1.3;
+    double double3 = 1.1;
+    float float1 = 2.2;
+    float float2 = 2.3;
+    float float3 = 2.1;
+
+    bool returnVal = assertLessThanEqualTo(&param1, &param3, "int");
+    bool returnVal2 = assertLessThanEqualTo(&param1, &param2, "int");
+    if (returnVal && !returnVal2) {
+        printf(ANSI_COLOR_GREEN "INT tests passed!" ANSI_COLOR_RESET "\n");
+    } else {
+        printf(ANSI_COLOR_RED "INT tests FAILED!" ANSI_COLOR_RESET "\n");
+    }
+    
+    returnVal = assertLessThanEqualTo(&char1, &char3, "char");
+    returnVal2 = assertLessThanEqualTo(&char1, &char2, "char");
+    if (returnVal && !returnVal2) {
+        printf(ANSI_COLOR_GREEN "CHAR tests passed!" ANSI_COLOR_RESET "\n");
+    } else {
+        printf(ANSI_COLOR_RED "CHAR tests FAILED!" ANSI_COLOR_RESET "\n");
+    }
+
+    returnVal = assertLessThanEqualTo(&double1, &double3, "double");
+    returnVal2 = assertLessThanEqualTo(&double1, &double2, "double");
+    if (returnVal && !returnVal2) {
+        printf(ANSI_COLOR_GREEN "DOUBLE tests passed!" ANSI_COLOR_RESET "\n");
+    } else {
+        printf(ANSI_COLOR_RED "DOUBLE tests FAILED!" ANSI_COLOR_RESET "\n");
+    }
+
+    returnVal = assertLessThanEqualTo(&float1, &float3, "float");
+    returnVal2 = assertLessThanEqualTo(&float1, &float2, "float");
+    if (returnVal && !returnVal2) {
+        printf(ANSI_COLOR_GREEN "FLOAT tests passed!" ANSI_COLOR_RESET "\n");
+    } else {
+        printf(ANSI_COLOR_RED "FLOAT tests FAILED!" ANSI_COLOR_RESET "\n");
+    }
+}
